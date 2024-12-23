@@ -1,101 +1,183 @@
+"use client";
 import Image from "next/image";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { motion } from "framer-motion";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+    <div className="min-h-screen">
+      {/* Hero Section */}
+      <section className="py-20 md:py-32 text-center relative overflow-hidden">
+        <div className="container mx-auto px-4 relative z-10">
+          <motion.h1
+            className="text-5xl md:text-6xl font-bold mb-6 text-primary"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+            Meet Your AI Assistant on Telegram
+          </motion.h1>
+          <motion.p
+            className="text-xl md:text-xl mb-8 text-muted-foreground"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
           >
-            Read our docs
-          </a>
+            Seamlessly manage Solana wallets, send SOL, deploy tokens, create
+            bets, and more—right from your favorite messaging app.
+          </motion.p>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.4 }}
+          >
+            <Button
+              asChild
+              size="lg"
+              className="hover:pointer-events-none cursor-not-allowed opacity-50"
+            >
+              <Link href="https://t.me/YourBotUsername" className="font-bold">
+                Currently Closed Beta
+              </Link>
+            </Button>
+          </motion.div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+        <div className="absolute inset-0 z-0">
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 opacity-20 animate-gradient-x"></div>
+          <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10"></div>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section id="features" className="py-20 bg-muted">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center text-primary">
+            What Can Our AI Bot Do?
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <FeatureCard
+              title="Manage Wallets"
+              description="Easily create and manage Solana wallets for seamless transactions."
+              icon="💼"
+            />
+            <FeatureCard
+              title="Send SOL"
+              description="Transfer SOL securely and efficiently to others on the Solana network."
+              icon="💸"
+            />
+            <FeatureCard
+              title="Deploy Tokens"
+              description="Deploy custom tokens directly on the Solana blockchain with ease."
+              icon="🪙"
+            />
+            <FeatureCard
+              title="Create Bets"
+              description="Set up and manage decentralized bets on the Solana blockchain."
+              icon="🎲"
+            />
+            <FeatureCard
+              title="Swap Tokens"
+              description="Easily swap tokens on the Solana blockchain with fast and secure transactions."
+              icon="🔄"
+            />
+            <FeatureCard
+              title="Interact with Smart Contracts"
+              description="Interact with Solana smart contracts for decentralized applications."
+              icon="📜"
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* About Section */}
+      <section id="about" className="py-20">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center text-primary">
+            About Our AI Agent
+          </h2>
+          <div className="flex flex-col md:flex-row items-center justify-between">
+            <motion.div
+              className="md:w-1/2 mb-8 md:mb-0"
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5 }}
+              viewport={{ once: true }}
+            >
+              <Image
+                src="/ai-assistant.svg"
+                alt="AI Assistant"
+                width={500}
+                height={500}
+                className="rounded-lg"
+              />
+            </motion.div>
+            <motion.div
+              className="md:w-1/2 md:pl-8"
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5 }}
+              viewport={{ once: true }}
+            >
+              <p className="text-lg mb-4">
+                Our AI agent is powered by cutting-edge technology and
+                specialized to assist with Solana blockchain tasks. Here's what
+                it can do:
+              </p>
+              <p className="text-lg mb-4">
+                - Create new Solana wallets effortlessly.
+                <br />
+                - Send SOL to others securely and efficiently.
+                <br />
+                - Deploy tokens directly on the Solana blockchain.
+                <br />- Set up and manage bets on Solana with ease.
+              </p>
+              <p className="text-lg">
+                Experience the future of blockchain automation today!
+              </p>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section id="contact" className="py-20 bg-muted">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-8 text-primary">
+            Get in Touch
+          </h2>
+          <p className="text-xl mb-8 text-muted-foreground">
+            Have questions or feedback? We'd love to hear from you!
+          </p>
+          <Button asChild size="lg">
+            <Link href="mailto:contact@example.com">Contact Us</Link>
+          </Button>
+        </div>
+      </section>
     </div>
+  );
+}
+
+function FeatureCard({ title, description, icon }: any) {
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+      viewport={{ once: true }}
+    >
+      <Card>
+        <CardHeader>
+          <CardTitle className="text-center">
+            <span className="text-4xl mb-4">{icon}</span>
+            <h3 className="text-xl font-semibold text-primary">{title}</h3>
+          </CardTitle>
+        </CardHeader>
+        <CardContent>
+          <p className="text-muted-foreground text-center">{description}</p>
+        </CardContent>
+      </Card>
+    </motion.div>
   );
 }
