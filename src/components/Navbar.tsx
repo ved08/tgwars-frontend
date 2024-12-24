@@ -20,11 +20,10 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed w-full z-50 transition-all duration-300 ${
-        isScrolled
-          ? "bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60"
-          : "bg-transparent"
-      }`}
+      className={`fixed w-full z-50 transition-all duration-300 ${isScrolled
+        ? "bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60"
+        : "bg-transparent"
+        }`}
     >
       <div className="container mx-auto flex justify-between items-center p-4">
         <Link href="/" className="flex items-center space-x-2">
@@ -35,7 +34,7 @@ export default function Navbar() {
             height={32}
             className="rounded-full"
           /> */}
-          <span className="text-xl font-bold uppercase">Bet-Buddy</span>
+          <span className="text-xl font-bold uppercase">TGWars</span>
         </Link>
         <div className="hidden md:flex space-x-4">
           <NavLink href="#features">Features</NavLink>

@@ -17,7 +17,7 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
-            Meet Your AI Assistant on Telegram
+            Meet Your AI Betting Bot on Telegram
           </motion.h1>
           <motion.p
             className="text-xl md:text-xl mb-8 text-muted-foreground"
@@ -25,8 +25,7 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            Seamlessly manage Solana wallets, send SOL, deploy tokens, create
-            bets, and more—right from your favorite messaging app.
+            Betting with friends can be fun, but handling the logistics might be tedious. Introducing TGWars, an AI agent driven telegram betting bot which can create, handle, and resolve a bet all in your group chat! Now stop the yap and start putting real stakes
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -58,34 +57,19 @@ export default function Home() {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <FeatureCard
-              title="Manage Wallets"
-              description="Easily create and manage Solana wallets for seamless transactions."
-              icon="💼"
-            />
-            <FeatureCard
-              title="Send SOL"
-              description="Transfer SOL securely and efficiently to others on the Solana network."
-              icon="💸"
-            />
-            <FeatureCard
-              title="Deploy Tokens"
-              description="Deploy custom tokens directly on the Solana blockchain with ease."
-              icon="🪙"
-            />
-            <FeatureCard
               title="Create Bets"
               description="Set up and manage decentralized bets on the Solana blockchain."
               icon="🎲"
             />
             <FeatureCard
-              title="Swap Tokens"
-              description="Easily swap tokens on the Solana blockchain with fast and secure transactions."
-              icon="🔄"
+              title="Join Bets"
+              description="Easily join bet with a simple message. Crossmint's powerful api will sign a transaction for you"
+              icon="🪙"
             />
             <FeatureCard
-              title="Interact with Smart Contracts"
-              description="Interact with Solana smart contracts for decentralized applications."
-              icon="📜"
+              title="Resolve Bets"
+              description="Once done, easily resolve bet with a simple message includng winner. AI will handle the logistics bs"
+              icon="🔄"
             />
           </div>
         </div>
@@ -121,20 +105,19 @@ export default function Home() {
               viewport={{ once: true }}
             >
               <p className="text-lg mb-4">
-                Our AI agent is powered by cutting-edge technology and
-                specialized to assist with Solana blockchain tasks. Here's what
-                it can do:
+                Betting with friends can be fun, but handling the logistics might be tedious. Introducing TGWars, an AI agent driven telegram betting bot which can create, handle, and resolve a bet all in your group chat! Now stop the yap and start putting real stakes
               </p>
               <p className="text-lg mb-4">
-                - Create new Solana wallets effortlessly.
+                - Create new Bet
                 <br />
-                - Send SOL to others securely and efficiently.
+                - Join Bets
                 <br />
-                - Deploy tokens directly on the Solana blockchain.
-                <br />- Set up and manage bets on Solana with ease.
+                - Resolve Bet
+                <br />
+                - And theres much more to do!
               </p>
               <p className="text-lg">
-                Experience the future of blockchain automation today!
+                Now stop the yap and start resolving fights with a bet!
               </p>
             </motion.div>
           </div>
