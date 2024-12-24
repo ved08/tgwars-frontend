@@ -131,7 +131,7 @@ export default function Home() {
             Get in Touch
           </h2>
           <p className="text-xl mb-8 text-muted-foreground">
-            Have questions or feedback? We'd love to hear from you!
+            Have questions or feedback?
           </p>
           <Button asChild size="lg">
             <Link href="mailto:contact@example.com">Contact Us</Link>
@@ -142,7 +142,7 @@ export default function Home() {
   );
 }
 
-function FeatureCard({ title, description, icon }: any) {
+function FeatureCard(props: { title: string, description: string, icon: string }) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -153,12 +153,12 @@ function FeatureCard({ title, description, icon }: any) {
       <Card>
         <CardHeader>
           <CardTitle className="text-center">
-            <span className="text-4xl mb-4">{icon}</span>
-            <h3 className="text-xl font-semibold text-primary">{title}</h3>
+            <span className="text-4xl mb-4">{props.icon}</span>
+            <h3 className="text-xl font-semibold text-primary">{props.title}</h3>
           </CardTitle>
         </CardHeader>
         <CardContent>
-          <p className="text-muted-foreground text-center">{description}</p>
+          <p className="text-muted-foreground text-center">{props.description}</p>
         </CardContent>
       </Card>
     </motion.div>
